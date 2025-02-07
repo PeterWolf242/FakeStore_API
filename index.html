@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./assets/img/apple-touch-icon.webp"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/img/favicon-32x32.webp"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./assets/img/favicon-16x16.webp"
+		/>
+
+		<link rel="stylesheet" href="./style.css" />
+		<title>Fakestore API</title>
+	</head>
+	<body id="top">
+		<section class="topSection">
+			<header>
+				<h1>Super Fakestore</h1>
+				<!-- * Header für Suchen, Sortieren und Filter-Funktionen -->
+			</header>
+		</section>
+
+		<section id="headerStoreOverlay" class="header_store_overlay">
+			<div id="headerStore" class="header_store">
+				<!-- * Icon für den Warenkorb -->
+				<div id="iconCard" class="icon_card fullview-img">
+					<span id="cardCount">0</span>
+					<img
+						src="./assets/img/card-icon.png"
+						alt="Card-Icon"
+						title="Card-Icon"
+						aria-label="Card-Icon"
+					/>
+				</div>
+				<!-- * Container für Suchen und Sortieren -->
+				<div id="search_sort" class="search_sort">
+					<input
+						type="text"
+						name="searchProduct"
+						id="searchProduct"
+						placeholder="Suchbegriff"
+					/>
+					<select name="" id="SortProduct">
+						<option value="" disabled selected hidden>Sortieren nach</option>
+						<option value="name">Name</option>
+						<option value="Preis">Preis</option>
+					</select>
+				</div>
+				<!-- ? Pfeil zum Ein/Ausklappen der Filter-Regeln -->
+				<div class="filter-arrow" id="filterArrow">
+					<span class="arrowText" id="arrowText">Filter</span
+					><span id="arrowDown" class="arrowDown">&#129123;</span>
+				</div>
+				<div class="filter_container" id="filterContainer">
+					<!-- * Container für Filtern nach Kategorien -->
+					<h2>Filtern nach:</h2>
+					<div class="filterBox">
+						<button type="button" id="all">All</button>
+						<button type="button" id="electronics">Electronic</button>
+						<button type="button" id="jewelery">Schmuck</button>
+						<button type="button" id="men's clothing">Herrenbekleidung</button>
+						<button type="button" id="women's clothing">Damenbekleidung</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<main>
+			<!-- * Hauptcontainer */ -->
+			<div id="output"></div>
+
+			<div id="toTop" class="to-top">
+				<a href="#top">
+					<img
+						src="./assets/img/scroll-to-top.png"
+						alt="scroll-to-top"
+						aria-label="scroll-to-top"
+						title="scroll-to-top"
+					/>
+				</a>
+			</div>
+		</main>
+
+		<script type="module" src="./main.ts"></script>
+		<script type="module" src="./card.ts"></script>
+	</body>
+</html>
