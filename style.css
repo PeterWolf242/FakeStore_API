@@ -496,7 +496,8 @@ h2 {
 
 	.header_store .search_sort {
 		flex-direction: column;
-		width: 100%;
+		width: 85%;
+		margin-right: auto;
 	}
 
 	.header_store .search_sort #searchProduct,
@@ -504,6 +505,13 @@ h2 {
 		display: block;
 		width: 100%;
 	}
+
+	.header_store .filter-arrow #arrowText {
+		top: -3rem;
+		right: 0;
+	}
+
+	/*  */
 
 	.header_store .filterBox {
 		flex-direction: column;
